@@ -1,4 +1,6 @@
-<div [ngClass]="elementClass" fsPin>
+
+
+<div fsPin container="window">
 
   <p>Because organic food is healthier for you in general, contains fewer chemicals and
   promotes a better environment, it is a better lifestyle choice. In the last ten years, there has been
@@ -126,11 +128,48 @@
   chemicals were being used.
   </p>
 
-  <div fsPinPanel>
+  <div fsPinPanel panelClass="pin-panel" [fixed]="true" index="10" *ngIf="show">
     <div class="wrapper">
-      <button mat-raised-button color="primary">Save</button>
+      <button mat-raised-button color="primary">Save A</button>
     </div>
   </div>
+
+  <p>
+    Misconceptions about organic food. Despite the evidence given, there have been some
+    studies and research initiatives to show that there are no benefits to organic food, and these are
+    simply not correct. Because many different studies by different scientists and organizations can
+    have different political and economic agendas, there is much more opportunity for them to be
+    wholly misread. According to Deirde Imus, “the myth that organic foods are no better than their
+    conventional counterparts is beyond salacious: it is simply untrue” (Imus). Many studies have
+    been done in order to show that there are scientific and nutritional grounds for the advantages of
+    organic foods over regular ones. Even on the basis of just history, we know that tampered and
+    genetically modified food is a new age phenomenon. Looking back hundreds of years, we did
+    not have this problem beforehand in terms of obesity and other long term negative health trends.
+    The core difference over time was that the food became much more processed in terms of how
+    chemicals were being used.
+    </p>
+
+  <div fsPinPanel panelClass="pin-panel" [fixed]="true" *ngIf="show" #pinB>
+    <div class="wrapper">
+      <button mat-raised-button color="primary">Save B</button>
+      <button mat-raised-button (click)="unpin(pinB)">Unpin</button>
+    </div>
+  </div>
+
+  <p>
+    Misconceptions about organic food. Despite the evidence given, there have been some
+    studies and research initiatives to show that there are no benefits to organic food, and these are
+    simply not correct. Because many different studies by different scientists and organizations can
+    have different political and economic agendas, there is much more opportunity for them to be
+    wholly misread. According to Deirde Imus, “the myth that organic foods are no better than their
+    conventional counterparts is beyond salacious: it is simply untrue” (Imus). Many studies have
+    been done in order to show that there are scientific and nutritional grounds for the advantages of
+    organic foods over regular ones. Even on the basis of just history, we know that tampered and
+    genetically modified food is a new age phenomenon. Looking back hundreds of years, we did
+    not have this problem beforehand in terms of obesity and other long term negative health trends.
+    The core difference over time was that the food became much more processed in terms of how
+    chemicals were being used.
+    </p>
 </div>
 
 

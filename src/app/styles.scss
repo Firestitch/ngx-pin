@@ -1,0 +1,16 @@
+.fs-pin-panel {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #efefef;
+  bottom: 0;
+  z-index: 999;
+  position: sticky;
+
+  &.fs-pin-panel-fixed {
+    position: fixed;
+  }
+}
+
+.fs-pin-anchor {
+  visibility: hidden;
+}

@@ -1,11 +1,11 @@
 {
-  "name": "@firestitch/package",
-  "title": "package.json -> Rename Title to Component Title",
-  "description": "@firestitch/package",
-  "version": "9.0.0",
+  "name": "@firestitch/pin",
+  "title": "Pin",
+  "description": "@firestitch/pin",
+  "version": "9.0.6",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Firestitch/ngx-package"
+    "url": "https://github.com/Firestitch/ngx-pin"
   },
   "author": {
     "name": "Firestitch",

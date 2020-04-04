@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'fs-component',
-  templateUrl: 'component.component.html',
-  styleUrls: [ 'component.component.scss' ],
+  selector: 'fs-pin',
+  templateUrl: 'pin.component.html',
+  styleUrls: [ 'pin.component.scss' ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FsComponentComponent {
+export class FsPinComponent {
 
   constructor() {
   }

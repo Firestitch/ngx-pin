@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { KitchenSinkConfigureComponent } from '../kitchen-sink-configure';
 import { FsExampleComponent } from '@firestitch/example';
 import { FsMessage } from '@firestitch/message';
+import { FsPinDirective } from '@firestitch/package';
 
 @Component({
   selector: 'kitchen-sink',
@@ -11,6 +12,7 @@ import { FsMessage } from '@firestitch/message';
 export class KitchenSinkComponent {
 
   public config = {};
+  public elementClass = ['element-container'];
 
   constructor(private exampleComponent: FsExampleComponent,
               private message: FsMessage) {

@@ -1,3 +1,4 @@
+import { WindowComponent } from './components/window/window.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FsExampleModule } from '@firestitch/example';
 import { FsMessageModule } from '@firestitch/message';
-import { FsComponentModule } from '@firestitch/package';
+import { FsPinModule } from '@firestitch/package';
 import { FsLabelModule } from '@firestitch/label';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -26,7 +27,7 @@ const routes: Routes = [
   bootstrap: [ AppComponent ],
   imports: [
     BrowserModule,
-    FsComponentModule,
+    FsPinModule,
     BrowserAnimationsModule,
     AppMaterialModule,
     FormsModule,
@@ -40,7 +41,8 @@ const routes: Routes = [
     AppComponent,
     ExamplesComponent,
     KitchenSinkComponent,
-    KitchenSinkConfigureComponent
+    KitchenSinkConfigureComponent,
+    WindowComponent
   ],
 })
 export class PlaygroundModule {
