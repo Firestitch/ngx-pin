@@ -24,7 +24,7 @@ export class FsPinService implements OnDestroy {
   private _target;
 
   public ngOnDestroy() {
-    this._destroy$.next();
+    this._destroy$.next(null);
     this._destroy$.complete();
     this.destroy();
   }
