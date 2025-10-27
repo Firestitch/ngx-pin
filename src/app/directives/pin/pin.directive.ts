@@ -6,8 +6,9 @@ import { FsPinPanelDirective } from '../pin-panel/pin-panel.directive';
 import { Subject } from 'rxjs';
 
 @Directive({
-  selector: '[fsPin]',
-  providers: [FsPinService]
+    selector: '[fsPin]',
+    providers: [FsPinService],
+    standalone: true
 })
 export class FsPinDirective implements AfterViewInit, OnDestroy {
 

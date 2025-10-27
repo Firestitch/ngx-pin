@@ -1,7 +1,8 @@
 import { Directive, Input, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[fsPinPanel]',
+    selector: '[fsPinPanel]',
+    standalone: true,
 })
 export class FsPinPanelDirective {
 

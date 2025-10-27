@@ -5,17 +5,15 @@ import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
-  exports: [
-    FsPinDirective,
-    FsPinPanelDirective
-  ],
-  declarations: [
-    FsPinDirective,
-    FsPinPanelDirective
-  ],
+    imports: [
+        CommonModule,
+        FsPinDirective,
+        FsPinPanelDirective,
+    ],
+    exports: [
+        FsPinDirective,
+        FsPinPanelDirective
+    ],
 })
 export class FsPinModule {
   static forRoot(): ModuleWithProviders<FsPinModule> {
