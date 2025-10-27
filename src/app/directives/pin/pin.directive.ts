@@ -1,7 +1,7 @@
 import { takeUntil } from 'rxjs/operators';
 
 import { FsPinService } from './../../services/pin.service';
-import { Directive, ElementRef, AfterContentInit, ContentChildren, QueryList, Input, IterableDiffers, IterableDiffer, OnDestroy, AfterViewInit } from '@angular/core';
+import { Directive, ElementRef, AfterContentInit, ContentChildren, QueryList, Input, IterableDiffers, IterableDiffer, OnDestroy, AfterViewInit, inject } from '@angular/core';
 import { FsPinPanelDirective } from '../pin-panel/pin-panel.directive';
 import { Subject } from 'rxjs';
 
@@ -11,6 +11,10 @@ import { Subject } from 'rxjs';
     standalone: true
 })
 export class FsPinDirective implements AfterViewInit, OnDestroy {
+  private _pinService = inject(FsPinService);
+  private _el = inject(ElementRef);
+  private _differs = inject(IterableDiffers);
+
 
   @ContentChildren(FsPinPanelDirective, { descendants: true }) pinPanels: QueryList<FsPinPanelDirective>;
 
@@ -19,9 +23,7 @@ export class FsPinDirective implements AfterViewInit, OnDestroy {
   private _differ: IterableDiffer<any>;
   private _destroy$ = new Subject();
 
-  constructor(private _pinService: FsPinService,
-              private _el: ElementRef,
-              private _differs: IterableDiffers) {
+  constructor() {
     this._differ = this._differs.find([]).create(null);
   }
 
